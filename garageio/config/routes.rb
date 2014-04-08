@@ -11,9 +11,10 @@ Garageio::Application.routes.draw do
 
   get 'users/new' => 'users#new'
 
-  get 'cars'      => 'cars#index'
-  get 'cars/new'  => 'cars#new'
-  post 'cars'     => 'cars#create'
-  get 'cars/:id'  => 'cars#show'
+  get 'cars'        => 'cars#index'
+  get 'cars/new'    => 'cars#new'
+  post 'cars'       => 'cars#create'
+  get 'cars/:id'    => 'cars#show'
+  delete 'cars/:id' => 'cars#destroy'
   
 end

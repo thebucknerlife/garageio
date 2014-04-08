@@ -4,6 +4,6 @@
 
 <ul class='list-group'>
 <% @cars.each do |car| %>
-  <li class='list-group-item'><%= car.year %> <%= car.make %> <%= car.car_model %></li>
+  <li class='list-group-item'><%= car.year %> <%= car.make %> <%= car.car_model %> <%= link_to "", "cars/#{car.id}", method: 'delete', class: 'glyphicon glyphicon-remove pull-right' %></li>
 <% end %>
 </ul>
