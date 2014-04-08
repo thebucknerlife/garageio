@@ -1,0 +1,9 @@
+<h1>Your Cars</h1>
+
+<a href="/cars/new" class='btn btn-primary'>New Car</a>
+
+<ul class='list-group'>
+<% @cars.each do |car| %>
+  <li class='list-group-item'><%= car.year %> <%= car.make %> <%= car.car_model %></li>
+<% end %>
+</ul>
