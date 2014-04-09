@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404022753) do
+ActiveRecord::Schema.define(version: 20140409025624) do
 
   create_table "cars", force: true do |t|
     t.string   "make"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20140404022753) do
   end
 
   create_table "ownerships", force: true do |t|
-    t.string   "user_id"
-    t.string   "car_id"
+    t.integer  "user_id",    limit: 255
+    t.integer  "car_id",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

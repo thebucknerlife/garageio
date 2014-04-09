@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:info] = ["Welcome to garage.io!"]
-      redirect_to '/cars/index'
+      redirect_to '/cars'
     else
       flash[:error] = @user.errors.full_messages
       redirect_to '/users/new'
