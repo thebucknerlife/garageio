@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UserMailer.welcome_email(@user).deliver
       session[:user_id] = @user.id
       flash[:info] = ["Welcome to garage.io!"]
       redirect_to '/cars'
